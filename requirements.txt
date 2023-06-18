@@ -1,4 +1,4 @@
 pytube
 flask
 uuid
-guicorn
+gunicorn
