@@ -1,11 +1,13 @@
 import os
 import uuid
 from pytube import YouTube
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file,render_template
 
 app = Flask(__name__)
 
-
+@app.route('/home')
+def hom():
+    return render_template('home.html')
 @app.route('/')
 def strm():
     link = request.args.get('link')
