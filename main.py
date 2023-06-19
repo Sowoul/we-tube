@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/home')
 def hom():
-    return render_template('home.html')
+    return render_template('index.html')
 @app.route('/')
 def strm():
     link = request.args.get('link')
