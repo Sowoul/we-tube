@@ -1,7 +1,7 @@
 import os
 import uuid
 from pytube import YouTube
-from flask import Flask, request, send_file,render_template
+from flask import Flask, request, send_file,render_template,redirect
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def hom():
 def strm():
     link = request.args.get('link')
     if link is None:
-        return render_template('index.html')
+        return redirect('https://we-tube.onrender.com/home',code=302)
     else: 
         pass
     try:
