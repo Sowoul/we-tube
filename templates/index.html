@@ -256,7 +256,7 @@
     <main>
       <div class="container">
         <h1>We-Tube</h1>
-        <h2>A free youtube downloader!</h2>
+        <h2>Enter the youtube link below :</h2>
         <div class="search-box">
           <div class="search-icon">
             <i class="fa fa-search search-icon"></i>
@@ -307,13 +307,13 @@
           $(".search-box").removeClass("border-searching");
           $(".search-icon").removeClass("si-rotate");
         });
-        $("#search").keyup(function () {
-          if ($(this).val().length > 0) {
-            $(".go-icon").addClass("go-in");
-          } else {
-            $(".go-icon").removeClass("go-in");
+        $("#search").on("keydown", function (event) {
+          if (event.keyCode === 13) {
+            event.preventDefault();
+            search();
           }
         });
+
         $(".go-icon").click(function () {
           $(".search-form").submit();
         });
