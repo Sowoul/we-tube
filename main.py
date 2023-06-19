@@ -14,7 +14,7 @@ def strm():
     try:
         print(link)
         obj = YouTube(link)
-        yt = obj.streams.get_lowest_resolution()
+        yt = obj.streams.get_highest_resolution()
 
         unique_filename = str(uuid.uuid4()) + '.mp4'
 
