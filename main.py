@@ -11,6 +11,10 @@ def hom():
 @app.route('/')
 def strm():
     link = request.args.get('link')
+    if link is None:
+        return render_template('index.html')
+    else: 
+        pass
     try:
         print(link)
         obj = YouTube(link)
