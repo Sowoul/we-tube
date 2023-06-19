@@ -27,7 +27,7 @@ def strm():
 
         yt.download(output_path=temp_directory, filename=unique_filename)
 
-        return send_file(temp_file, as_attachment=True,download_name=obj.title)
+        return send_file(temp_file, as_attachment=True,download_name=f'{obj.title}.mp4')
     except Exception as e:
         return f'Error: {str(e)}'
 
