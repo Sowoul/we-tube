@@ -40,7 +40,7 @@ Ensure you have the following installed on your machine:
 
 4. Start the development server:
 ```
-  npm run start
+   python3 app.py
 ```
 
 The application will now be available at `http://localhost:8080` in your web browser.
